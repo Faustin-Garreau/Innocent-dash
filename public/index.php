@@ -1,4 +1,5 @@
 <?php
+session_start();
 // CHEMAIN
     define('SRC', __DIR__ . '/../src/');
     define('CONTROLLER', __DIR__ . '/../src/Controller/');
@@ -8,7 +9,7 @@
 // ACCES BDD
 
     define('USER', 'root');
-    define('DATABASE', 'objetuser');
+    define('DATABASE', 'innodash');
     define('PASSWORD', 'root');
     $bdd = new PDO('mysql:host=127.0.0.1;dbname=' . DATABASE . ';charset=utf8', USER, PASSWORD);
 
