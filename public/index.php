@@ -1,18 +1,18 @@
 <?php
-// CHEMAIN
-    define('SRC', __DIR__ . '/../src/');
-    define('CONTROLLER', __DIR__ . '/../src/Controller/');
-    define('MODEL', __DIR__ . '/../src/Model/');
-    define('VIEW', __DIR__ . '/../src/View/');
+session_start();
+define('SRC',__DIR__.'/../src/');
+define('CONTROLLER',__DIR__.'/../src/Controllers/');
+define('MODEL',__DIR__.'/../src/Models/');
+define('VIEW',__DIR__.'/../src/Views/');
 
-// ACCES BDD
+define('USER', 'root');
+define('DATABASE','innodash');
+define('PASSWORD','root');
 
-    define('USER', 'root');
-    define('DATABASE', 'objetuser');
-    define('PASSWORD', 'root');
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=' . DATABASE . ';charset=utf8', USER, PASSWORD);
+require '../vendor/autoload.php';
 
-// require du router
+$bdd = new PDO('mysql:host=127.0.0.1;dbname='. DATABASE . ';charset=utf8', USER, PASSWORD);
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    require_once SRC.'Router.php';
-    run();
+$router= new App\Router();
+$router->run();

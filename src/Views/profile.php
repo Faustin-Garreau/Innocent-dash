@@ -45,25 +45,26 @@
 
     <div class="flex flex-col md:flex-row">
 
-        <div class="bg-blue-900 h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
+        <div class="bg-blue-900 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
             <div class="md:fixed">
             <div class="md:mt-12 md:w-48 md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                 <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-envelope pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Faire sa candidature</span>
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-innocent-500">
-                            <i class="fas fa-chart-area pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Liste des candidatures</span>
+                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                            <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-wallet pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Candidature archiver</span>
                         </a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -74,18 +75,18 @@
         <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
             
             <div class="bg-gray-800 p-2 shadow text-xl text-white">
-                <h3 class="font-bold pl-2">Candidature</h3>
+                <h3 class="font-bold pl-2">Edite ton profile</h3>
             </div>
             
 
 
             <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
-                <div class="w-full	md:w-full xl:w-full p-3">
+                <div class="w-full md:w-full xl:w-full p-3">
                     <!--Template Card-->
-                    <div class="bg-white border-transparent rounded-lg shadow-lg">
+                    <!-- <div class="bg-white border-transparent rounded-lg shadow-lg">
                         <div class="bg-gray-400 border-b-2 border-gray-500 rounded-tl-lg rounded-tr-lg p-2">
-                            <h5 class="font-bold uppercase text-gray-600">Candidature: Titre</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Creation de candidature</h5>
                         </div>
                         <div class="p-5">
                             <h1>Nom:</h1>
@@ -101,14 +102,62 @@
                         </div>
                             <div class="ml-5">
                             <a href="" class="p-2 bg-blue-900 rounded hover:bg-gray-600 text-white">
-                                <i class="fas text-gray-100 fa-trash"></i>
+                                <i class="fas text-gray-100 fa-eye"></i>
                             </a>
                         </div>
                         </div>
                         
-                    </div>
+                    </div> -->
+                    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+                        <div class="-mx-3 md:flex mb-6">
+                          <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                              Prénom
+                            </label>
+                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Tom">
+                            
+                          </div>
+                          <div class="md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+                              Mail
+                            </label>
+                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name" type="text" placeholder="exemple@gmail.com">
+                          </div>
+                        </div>
+                        <div class="-mx-3 md:flex mb-6">
+                            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                                  Pseudo Discord
+                                </label>
+                                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Spirit_TV#2334">
+                                
+                              </div>
+                              <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                                  Date de naissance
+                                </label>
+                                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="05/05/2000">
+                                
+                              </div>
+                        </div>
+                            
+                          <div class="flex justify-end flex-wrap p-4">
+                            
+                            <div class="ml-5">
+                                <button href="" class="p-2 bg-blue-900 rounded hover:bg-gray-600 text-white">Valide ton formulaire</button>
+                        </div>
+                        </div>
+                      </div>
                     <!--/Template Card-->
                 </div>
+                
+                
+                
+                
+                
+
+
+
             </div>
         </div>
     </div>
