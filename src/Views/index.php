@@ -51,7 +51,7 @@
 			
 		<div class="w-full flex items-center justify-between">
 			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
-				 <img class="h-8 fill-current text-indigo-600 pr-2" src="https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rouge_et_blanc_300620_1.png">InnocentLife
+				<img class="h-8 fill-current text-indigo-600 pr-2" src="https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rouge_et_blanc_300620_1.png">InnocentLife
 			</a>
 			
 			<div class="flex w-1/2 justify-end content-center">		
@@ -91,11 +91,6 @@
 	
 
 </div>
-
-
-  <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
 
 </body>
 
