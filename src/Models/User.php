@@ -7,7 +7,7 @@ class User{
     private $username;
     private $password;
 
-    public function getUsername(){
+    public function getPseudo(){
         return $this->username;
     }
     public function getPassword(){
@@ -16,7 +16,7 @@ class User{
     public function getId(){
         return $this->username;
     }
-    public function setUsername(){
+    public function setPseudo(){
 
     }
     public function setPassword(){
