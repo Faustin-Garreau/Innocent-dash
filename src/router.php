@@ -40,6 +40,9 @@ class Router {
         else if ($this->url == '/dashboard/candidature' && $this->method == 'GET') {
             $controllerApp->create();
         }
+        else if ($this->url == '/dashboard/archive' && $this->method == 'GET') {
+            $controllerApp->archive();
+        }
         else if ($this->url == '/dashboard/candidature' && $this->method == 'POST') {
             $controllerApp->store();
         }

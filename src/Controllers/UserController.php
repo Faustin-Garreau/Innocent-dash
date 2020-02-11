@@ -18,31 +18,35 @@
                     'confirm' => ['required']
                 ]);
 
+                
+
                 if ($this->validator->errors()) {
                     $_SESSION["errors"] = $this->validator->errors();
                     $_SESSION["old"] = $_POST;
-                    $this->redirect('/register');
-                }
-
-                if ($_POST["birthday"] < 18) {
-                    $_SESSION["errors"]["birthday"] = "Tu dois être majeur pour te connecter";
-                    $this->redirect('/register');
+                    //$this->redirect('/register');
                 }
 
                 if (!$_POST["password"] == $_POST["confirm"]) {
                     $_SESSION["errors"]["confirm"] = "Le confirmation de mot de passe doit etre egale au mot de passe saisie";
-                    $this->redirect('/register');
+                    //$this->redirect('/register');
+                }
+
+                if ($_POST["birthday"] < 18) {
+                    $_SESSION["errors"]["birthday"] = "Tu dois être majeur pour te connecter";
+                    //$this->redirect('/register');
                 }
                 
                 $user = $this->manager->find($_POST["pseudo"]);
 
-                if ($user) {
-                    $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
-                    $this->redirect('/register');
+                if (!$user && empty($_SESSION['errors'])) {
+                    $id = $this->manager->store();
+                    $_SESSION["user"] = ["pseudo" => $_POST['pseudo'], "id" => $id];
+                    $this->redirect('/dashboard');
+                    
                 }
-                $id = $this->manager->store();
-                $_SESSION["user"] = ["pseudo" => $_POST['pseudo'], "id" => $id];
-                $this->redirect('/dashboard');
+                $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
+                $this->redirect('/register');
+                
             }
 
             public function login() {

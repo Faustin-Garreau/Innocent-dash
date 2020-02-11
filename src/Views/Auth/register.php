@@ -9,7 +9,6 @@
     <title>S'enregistrer</title>
 </head>
 <body>
-
 <div id="vantajs" style="background-size: cover">
     <div class="h-screen w-screen">
             <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
