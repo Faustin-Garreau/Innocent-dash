@@ -38,11 +38,13 @@
                 $name = $this->manager->find($_POST["name"]);
                 $firstname = $this->manager->find($_POST["firstname"]);
         
-                if ($name && $firstname) {
-                    $_SESSION["errors"]["name"] == "Ce nom est déja utilisé";
-                    $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé";
+                
+                isset($name) ? $_SESSION["errors"]["name"] == "Ce nom est déja utilisé" : NULL;
+                isset($firstname) ? $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé" : NULL;
+                if ($_SESSION["errors"]) {
                     $this->redirect('/dashboard/candidature');
                 }
+            
         
                 $this->manager->store();
                 $this->redirect('/dashboard/'. $_POST["pseudo"]);
