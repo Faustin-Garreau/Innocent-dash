@@ -8,7 +8,7 @@ class Validator {
         foreach($rules as $rule) {
             if (preg_match('#^(min|max):([0-9]+)$#', $rule, $matches)) {
                 $rule = $matches[1];
-                $this-$rule($field, $matches[2]);
+                $this->$rule($field, $matches[2]);
             } 
             else {
                 $this->$rule($field);
@@ -88,7 +88,7 @@ class Validator {
             $this->errors[$field] = 'il faut que tu mettes au moins '.$min.' caractères';
         }
     }
-
+    
     public function errors()
     {
         return $this->errors;

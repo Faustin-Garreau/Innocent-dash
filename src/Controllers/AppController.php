@@ -3,7 +3,6 @@
     use App\Models\AppManager;
     use App\Validator;
 
-
     class AppController extends Controllers {
             private $manager;
             function __construct()
@@ -44,8 +43,7 @@
                 if ($_SESSION["errors"]) {
                     $this->redirect('/dashboard/candidature');
                 }
-            
-        
+                
                 $this->manager->store();
                 $this->redirect('/dashboard/'. $_POST["pseudo"]);
             }

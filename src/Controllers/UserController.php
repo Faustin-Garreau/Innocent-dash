@@ -18,15 +18,22 @@
                     'confirm' => ['required']
                 ]);
 
+                if ($this->validator->errors()) {
+                    $_SESSION["errors"] = $this->validator->errors();
+                    $_SESSION["old"] = $_POST;
+                    $this->redirect('/register');
+                }
+
                 if ($_POST["birthday"] < 18) {
                     $_SESSION["errors"]["birthday"] = "Tu dois être majeur pour te connecter";
                     $this->redirect('/register');
                 }
 
-                if ($this->validator->errors()) {
-                    $_SESSION["errors"] = $this->validator->errors();
+                if (!$_POST["password"] == $_POST["confirm"]) {
+                    $_SESSION["errors"]["confirm"] = "Le confirmation de mot de passe doit etre egale au mot de passe saisie";
                     $this->redirect('/register');
                 }
+                
                 $user = $this->manager->find($_POST["pseudo"]);
 
                 if ($user) {
@@ -70,6 +77,7 @@
                 require VIEW .'Auth/login.php';
         }
 
+            
         public function home() {
             require VIEW .'index.php';
         }
