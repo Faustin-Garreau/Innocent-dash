@@ -26,23 +26,32 @@
             public function store() {
                 $this->validator->validate([
                     'name' => ['required', 'alpha'],
-                    'firstname' => ['requires', 'alpha'],
+                    'firstname' => ['required', 'alpha'],
+                    'link' => ['required', 'alphaNumDash']
                 ]);
         
                 if ($this->validator->errors()) {
                     $_SESSION["errors"] = $this->validator->errors();
-                    $this->redirect('/dashboard/nouveau');
+                    $this->redirect('/dashboard/candidature');
                 }
         
-                $titre = $this->manager->find($_POST["title"]);
+                $name = $this->manager->find($_POST["name"]);
+                $firstname = $this->manager->find($_POST["firstname"]);
         
-                if ($titre) {
-                    $_SESSION["errors"]["title"] == "Ce titre est déja utilisé";
-                    $this->redirect('/dashboard/nouveau');
+                if ($name && $firstname) {
+                    $_SESSION["errors"]["name"] == "Ce nom est déja utilisé";
+                    $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé";
+                    $this->redirect('/dashboard/candidature');
                 }
         
                 $this->manager->store();
-                $this->redirect('/dashboard/'. $_POST["title"]);
+                $this->redirect('/dashboard/'. $_POST["pseudo"]);
+            }
+
+            public function show($name)
+            {
+                $todolist = $this->manager->find($name);
+                require VIEW.'show.php';
             }
         
         
