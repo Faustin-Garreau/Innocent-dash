@@ -40,7 +40,7 @@ class Router {
         else if ($this->url == '/dashboard/candidature' && $this->method == 'GET') {
             $controllerApp->create();
         }
-        else if ($this->url == '/dashboard/nouveau' && $this->method == 'POST') {
+        else if ($this->url == '/dashboard/candidature' && $this->method == 'POST') {
             $controllerApp->store();
         }
         else if (preg_match('#^\/dashboard\/([a-z0-9A-Z-%]+)$#',$this->url, $matches) && $this->method == 'GET'){
