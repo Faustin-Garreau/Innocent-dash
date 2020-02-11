@@ -70,7 +70,8 @@
                 require VIEW .'Auth/login.php';
         }
 
-        public function home(){
             
+        public function home() {
+            require VIEW .'index.php';
         }
     }
