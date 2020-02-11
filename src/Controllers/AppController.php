@@ -52,7 +52,7 @@
 
             public function show($name)
             {
-                $todolist = $this->manager->find($name);
+                $candidature = $this->manager->find($name);
                 require VIEW.'show.php';
             }
         
