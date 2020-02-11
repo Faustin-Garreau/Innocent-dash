@@ -4,5 +4,8 @@
     use App\Validator;
 
     class AppController {
-        
+        public function index()
+        {
+            # code...
+        }
     }

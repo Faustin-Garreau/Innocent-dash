@@ -69,4 +69,8 @@
             public function showLogin() {
                 require VIEW .'Auth/login.php';
         }
+
+        public function home(){
+            
+        }
     }
