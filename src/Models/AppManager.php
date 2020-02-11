@@ -12,6 +12,10 @@ class AppManager {
     }
     
     public function all() {
+
+    }
+
+    public function find() {
         
     }
 

@@ -14,9 +14,9 @@ class UserManager {
     public function store(){
         $request = $this->pdo->prepare('INSERT INTO user(pseudo,password,birthday) VALUES(:pseudo,:password,:birthday)');
         $request->execute([
-            "pseudo" => $_POST["username"],
+            "pseudo" => $_POST["pseudo"],
             "password" => password_hash($_POST["password"],PASSWORD_DEFAULT),
-            "birthday" => $_POST["age"]
+            "birthday" => $_POST["birthday"]
         ]);
         return $this->pdo->lastInsertId();
     }

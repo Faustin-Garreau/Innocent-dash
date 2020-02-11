@@ -12,35 +12,42 @@
             }
             public function register() {
                 $this->validator->validate([
-                    'username' => ['required', 'alpha', 'min:2'],
+                    'pseudo' => ['required', 'alpha', 'min:2'],
                     'password' => ['required', 'alphaNumDash', 'min:6'],
-                    'age' => ['required'],
+                    'birthday' => ['required'],
                     'confirm' => ['required']
                 ]);
 
-                if ($_POST["age"] < 18) {
-                    $_SESSION["errors"]["age"] = "Tu dois être majeur pour te connecter";
-                    $this->redirect('/register');
-                }
-
                 if ($this->validator->errors()) {
                     $_SESSION["errors"] = $this->validator->errors();
+                    $_SESSION["old"] = $_POST;
                     $this->redirect('/register');
                 }
-                $user = $this->manager->find($_POST["username"]);
+
+                if ($_POST["birthday"] < 18) {
+                    $_SESSION["errors"]["birthday"] = "Tu dois être majeur pour te connecter";
+                    $this->redirect('/register');
+                }
+
+                if (!$_POST["password"] == $_POST["confirm"]) {
+                    $_SESSION["errors"]["confirm"] = "Le confirmation de mot de passe doit etre egale au mot de passe saisie";
+                    $this->redirect('/register');
+                }
+                
+                $user = $this->manager->find($_POST["pseudo"]);
 
                 if ($user) {
-                    $_SESSION["errors"]["username"] = "Cet username est déja utilisé";
+                    $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
                     $this->redirect('/register');
                 }
                 $id = $this->manager->store();
-                $_SESSION["user"] = ["username" => $_POST['username'], "id" => $id];
+                $_SESSION["user"] = ["pseudo" => $_POST['pseudo'], "id" => $id];
                 $this->redirect('/dashboard');
             }
 
             public function login() {
                 $this->validator->validate([
-                    'username' => ['required', 'alpha', 'min:2'],
+                    'pseudo' => ['required', 'alpha', 'min:2'],
                     'password' => ['required', 'alphaNumDash', 'min:6']
                 ]);
         
@@ -51,14 +58,14 @@
                     $this->redirect('/login');
                 }
         
-                $user = $this->manager->find($_POST["username"]);
+                $user = $this->manager->find($_POST["pseudo"]);
         
                 if (!$user || ($user && !password_verify($_POST["password"], $user->getPassword()))) {
                     $_SESSION["errors"]["password"] = "Les identifiant ne sont pas bon";
                     $this->redirect('/login');
                 
                 }
-                $_SESSION["user"] = ["username" => $user->getUsername(), "id" => $user->getId()];
+                $_SESSION["user"] = ["pseudo" => $user->getPseudo(), "id" => $user->getId()];
                 $this->redirect('/dashboard');
             }
 
