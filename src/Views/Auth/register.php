@@ -21,8 +21,8 @@
                                 <form class="form-horizontal w-3/4 mx-auto" method="POST" action="#">
                                     <div class="flex flex-col mt-4">
                                         <label class="text-purple-700 hover:text-purple-500">Pseudo</label>
-                                        <input id="Pseudo" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="username">
-                                        <p class="text-red-900"><?php $_SESSION["errors"]["username"] ?></p>
+                                        <input id="Pseudo" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="pseudo">
+                                        <p class="text-red-900"><?php $_SESSION["errors"]["pseudo"] ?></p>
                                     </div>
                                     <div class="flex flex-col mt-4">
                                         <label class="text-purple-700 hover:text-purple-500">Mot de passe</label>
@@ -36,8 +36,8 @@
                                     </div>
                                     <div class="flex flex-col mt-4">
                                         <label class="text-purple-700 hover:text-purple-500">age</label>
-                                        <input id="age" type="number" class="flex-grow h-8 px-2 rounded border border-grey-400" name="age">
-                                        <p class="text-red-900"><?php $_SESSION["errors"]["age"] ?></p>
+                                        <input id="age" type="number" class="flex-grow h-8 px-2 rounded border border-grey-400" name="birthday">
+                                        <p class="text-red-900"><?php $_SESSION["errors"]["birthday"] ?></p>
                                     </div>
                                     <div class="flex flex-col mt-8">
                                         <button type="submit" class="bg-purple-700 hover:bg-purple-600 text-white text-sm font-semibold py-2 px-4 rounded">
