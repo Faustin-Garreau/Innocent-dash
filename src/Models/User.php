@@ -8,11 +8,19 @@ class User {
 
     public function getPseudo(){
         return $this->pseudo;
+=======
+        return $this->username;
+    }
+    public function getPassword(){
+        return $this->password;
+
     }
 
     public function getId(){
         return $this->id;
     }
+
+    public function setPseudo(){
 
     public function getPassword(){
         return $this->password;
