@@ -11,12 +11,22 @@ class AppManager {
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
     
-    public function all() {
+    public function all(){
 
     }
 
-    public function find() {
+    public function find(){
         
+    }
+
+    public function store(){
+        $request = $this->pdo->prepare('INSERT INTO application(name,firstname,googleDocs) VALUES(:name,:firstname,:googleDocs)');
+        $request->execute([
+            "name" => $_POST["name"],
+            "firstname" => $_POST["firstname"],
+            "googleDocs" => $_POST["link"]
+        ]);
+        return $this->pdo->lastInsertId();
     }
 
 }
