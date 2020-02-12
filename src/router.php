@@ -38,6 +38,9 @@ class Router {
         else if ($this->url == '/admin/dashboard' && $this->method == 'GET') {
             $controllerAdmin->adminDashboard();
         }
+        else if ($this->url == '/homedash' && $this->method == 'GET') {
+            $controllerApp->homeDash();
+        }
         else if ($this->url == '/dashboard/candidature' && $this->method == 'GET') {
             $controllerApp->create();
         }

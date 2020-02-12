@@ -24,16 +24,12 @@
 
                                         <input id="email" type="text" value="<?php echo isset($_SESSION["old"]["pseudo"]) ? $_SESSION["old"]["pseudo"] : "";?>" class="flex-grow h-8 px-2 border rounded border-grey-400" name="pseudo">
 
-                                        <input type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="pseudo" value="<?php echo isset($_SESSION["old"]["pseudo"]) ? $_SESSION["old"]["pseudo"] : "";?>">
-
                                         <span class="text-red-500"><?php echo isset($_SESSION["errors"]["pseudo"]) ? $_SESSION["errors"]["pseudo"] : "";?></span>
                                     </div>
                                     <div class="flex flex-col mt-4">
                                         <label class="text-purple-700 hover:text-purple-500">Mot de passe</label>
 
                                         <input id="password" type="password" value="<?php echo isset($_SESSION["old"]["password"]) ? $_SESSION["old"]["password"] : "";?>" class="flex-grow h-8 px-2 rounded border border-grey-400" name="password">
-
-                                        <input type="password" class="flex-grow h-8 px-2 rounded border border-grey-400" name="password" value="<?php echo isset($_SESSION["old"]["password"]) ? $_SESSION["old"]["password"] : "";?>">
 
                                         <span class="text-red-500"><?php echo isset($_SESSION["errors"]["password"]) ? $_SESSION["errors"]["password"] : "";?></span>
                                     </div>
@@ -63,12 +59,6 @@
 </html>
 
 <?php
-unset($_SESSION["errors"]);
-unset($_SESSION["old"]);
-
-
-
-<?php 
 unset($_SESSION["errors"]);
 unset($_SESSION["old"]);
 
