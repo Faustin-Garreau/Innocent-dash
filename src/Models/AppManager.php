@@ -19,12 +19,13 @@ class AppManager {
         
     }
 
-    public function store(){
-        $request = $this->pdo->prepare('INSERT INTO application(name,firstname,googleDocs) VALUES(:name,:firstname,:googleDocs)');
+    public function store($user_id){
+        $request = $this->pdo->prepare('INSERT INTO application(name,firstname,googleDocs,user_id) VALUES(:name,:firstname,:googleDocs,:user_id)');
         $request->execute([
             "name" => $_POST["name"],
             "firstname" => $_POST["firstname"],
-            "googleDocs" => $_POST["link"]
+            "googleDocs" => $_POST["link"],
+            "user_id" => $_SESSION["user"]["id"]
         ]);
         return $this->pdo->lastInsertId();
     }

@@ -69,7 +69,7 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
             <div class="bg-gray-800 p-2 shadow text-xl text-white">
                 <h3 class="font-bold pl-2">Pose ta candidaturre</h3>
             </div>
-            <div class="flex flex-row flex-wrap flex-grow mt-2">
+        <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
                 <div class="w-full md:w-full xl:w-full p-3">
                     <!--Template Card-->
@@ -95,8 +95,8 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                             </a>
                         </div>
                         </div>
-</div> -->
-                <form action="/dashboard" method="post">
+</div> --><?php var_dump($_SESSION) ?>
+                <form action="/dashboard/candidature" method="post">
                     <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
                         <div class="-mx-3 md:flex mb-6">
                             <div class="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -162,3 +162,6 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
     </script>
 </body>
 </html>
+<?php 
+unset($_SESSION["errors"]);
+unset($_SESSION["old"]);
