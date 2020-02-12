@@ -194,14 +194,6 @@
                       </div>
                     <!--/Template Card-->
                 </div>
-                
-                
-                
-                
-                
-
-
-
             </div>
         </div>
     </div>

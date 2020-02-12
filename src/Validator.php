@@ -49,8 +49,8 @@ class Validator {
 
     public function alphaNumDash($field)
     {
-        if (!preg_match('#^[A-Za-z0-9-_%/.#]+$#', $_POST[$field])) {
-            $this->errors[$field] = "les caractéres exploitables sont: '-', '_', '%','/','/'";
+        if (!preg_match('#^[A-Za-z0-9-_%]+$#', $_POST[$field])) {
+            $this->errors[$field] = "les caractéres exploitables sont: '-', '_'";
         }
     }
 
