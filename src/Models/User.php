@@ -4,17 +4,17 @@ namespace App\Models;
 
 class User{
     private $id;
-    private $username;
+    private $pseudo;
     private $password;
 
     public function getPseudo(){
-        return $this->username;
+        return $this->pseudo;
     }
     public function getPassword(){
         return $this->password;
     }
     public function getId(){
-        return $this->username;
+        return $this->id;
     }
     public function setPseudo(){
 
