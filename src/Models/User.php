@@ -1,25 +1,26 @@
 <?php 
 
 namespace App\Models;
-
-class User{
-    private $id;
-    private $username;
+class User {
+    private $pseudo;
     private $password;
+    private $id;
 
-    public function getUsername(){
-        return $this->username;
+    public function getPseudo(){
+        return $this->pseudo;
     }
+
+    public function getId(){
+        return $this->id;
+    }
+
     public function getPassword(){
         return $this->password;
     }
-    public function getId(){
-        return $this->username;
-    }
-    public function setUsername(){
 
-    }
-    public function setPassword(){
-        
+    public function setUsername($username){
+        }
+
+    public function setPassword(String $password){
     }
 }

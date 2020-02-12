@@ -58,6 +58,7 @@
                 if ($this->validator->errors()) {
                     // enregistrer en session
                     $_SESSION["errors"] = $this->validator->errors();
+                    $_SESSION["old"] = $_POST;
                     // redirige
                     $this->redirect('/login');
                 }
