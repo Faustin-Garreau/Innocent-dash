@@ -82,7 +82,7 @@
             </div>
             
 
-
+<?php foreach ($apps as $apps) { ?>
             <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
                 <div class="w-full md:w-1/2 xl:w-1/3 p-3">
@@ -92,10 +92,9 @@
                             <h5 class="font-bold uppercase text-gray-600">Candidature</h5>
                         </div>
                         <div class="p-5">
-                            <h1>Nom:</h1>
+                            <h1 value="<?php echo $apps->getName();?>">Nom:</h1>
                             <h1>Prenom:</h1>
                             <h1>Liens Gdocs:</h1>
-                            <h1>Activiter:</h1>
                         </div>
                         <div class="flex justify-end flex-wrap p-4">
                             <div>
@@ -114,16 +113,12 @@
                     <!--/Template Card-->
                 </div>
             </div>
+<?php } ?>
         </div>
     </div>
 
     </div>
-
-
-
-
-
-
+    
     <script>
         /*Toggle dropdown list*/
         function toggleDD(myDropMenu) {

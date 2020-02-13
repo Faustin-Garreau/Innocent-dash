@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +13,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"><!--Replace with your tailwind.css once created-->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
 </head>
+
 <body class="bg-blue-900 font-sans leading-normal tracking-normal mt-12">
+
     <!--Nav-->
     <nav class="bg-blue-900 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+
         <div class="flex flex-wrap items-center">
             <div class="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
                 <a href="#">
-                    <div class="h-1 w-32 p-0"><img src="https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rouge_et_blanc_300620_1.png(222 ko)
-https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rouge_et_blanc_300620_1.png" alt=""></div>
+                    <div class="h-1 w-32 p-0"><img src="https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rouge_et_blanc_300620_1.png" alt=""></div>
                 </a>
             </div>
             <div class="flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2">
@@ -32,19 +36,29 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                         </svg>
                     </div>
                 </span>
-            </div>
+			</div>
         </div>
+
     </nav>
+
+
     <div class="flex flex-col md:flex-row">
+
         <div class="bg-blue-900 shadow-lg h-16 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48">
             <div class="md:fixed">
             <div class="md:mt-12 md:w-48 md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                 <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
                     <li class="mr-3 flex-1">
                         <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-innocent-500">
-                            <i class="fas fa-envelope pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Faire sa candidature</span>
+                            <i class="fas fa-envelope pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Home</span>
                         </a>
                     </li>
+                    <li class="mr-3 flex-1">
+                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                            <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Faire sa candidature</span>
+                        </a>
+                    </li>
+                    
                     <li class="mr-3 flex-1">
                         <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
@@ -63,13 +77,19 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                 </ul>
             </div>
         </div>
+
+
         </div>
         <!-- LES CANDIDATURE -->
         <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+            
             <div class="bg-gray-800 p-2 shadow text-xl text-white">
-                <h3 class="font-bold pl-2">Pose ta candidaturre</h3>
+                <h3 class="font-bold pl-2">Home</h3>
             </div>
-        <div class="flex flex-row flex-wrap flex-grow mt-2">
+            
+
+
+            <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
                 <div class="w-full md:w-full xl:w-full p-3">
                     <!--Template Card-->
@@ -95,42 +115,28 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                             </a>
                         </div>
                         </div>
-</div> -->
-                <form action="/dashboard/candidature" method="post">
-                <?php var_dump($_SESSION);?>
-                    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
-                        <div class="-mx-3 md:flex mb-6">
-                            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">Nom</label>
-                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" type="text" name="name" placeholder="Jane">
-                            <span class="text-red-500"><?php echo isset($_SESSION["errors"]["name"]) ? $_SESSION["errors"]["name"] : "";?></span>
-                            </div>
-                            <div class="md:w-1/2 px-3">
-                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">Prenom</label>
-                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" type="text" name="firstname" placeholder="Doe">
-                            <span class="text-red-500"><?php echo isset($_SESSION["errors"]["firstname"]) ? $_SESSION["errors"]["firstname"] : "";?></span>
-                            </div>
-                        </div>
-                        <div class="-mx-3 md:flex mb-6">
-                            <div class="md:w-full px-3">
-                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">Histoire RP</label>
-                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" type="text" name="link" placeholder="Liens Gdocs">
-                            <span class="text-red-500"><?php echo isset($_SESSION["errors"]["link"]) ? $_SESSION["errors"]["link"] : "";?></span>
-                            </div>
-                        </div>
-                            <div class="flex justify-end flex-wrap p-4">
-                            <div class="ml-5">
-                                <button type="submit" class="p-2 bg-blue-900 rounded hover:bg-gray-600 text-white">Valide ton formulaire</button>
-                        </div>
-                        </div>
-                    </div>
-                </form>
-                        <!--/Template Card-->
+                        
+                    </div> -->
+                   
+
+
+      <h1 class="text-6xl  my-auto mx-auto  md:mx-48 ">
+        Formulaire <br />
+        <span class="text-teal-400">Envoyé tu peux aller passe ta douane !</span>
+      </h1>
+                    <!--/Template Card-->
                 </div>
             </div>
         </div>
     </div>
+
     </div>
+
+
+
+
+
+
     <script>
         /*Toggle dropdown list*/
         function toggleDD(myDropMenu) {
@@ -164,8 +170,8 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
             }
         }
     </script>
+
+
 </body>
+
 </html>
-<?php 
-unset($_SESSION["errors"]);
-unset($_SESSION["old"]);

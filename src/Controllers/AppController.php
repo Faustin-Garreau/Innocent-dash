@@ -38,14 +38,14 @@
                 $firstname = $this->manager->find($_POST["firstname"]);
         
                 
-                isset($name) ? $_SESSION["errors"]["name"] = "Ce nom est déja utilisé" : NULL;
-                isset($firstname) ? $_SESSION["errors"]["firstname"] = "Ce prénom est déja utilisé" : NULL;
+                empty($name) ? $_SESSION["errors"]["name"] = "Ce nom est déja utilisé" : NULL;
+                empty($firstname) ? $_SESSION["errors"]["firstname"] = "Ce prénom est déja utilisé" : NULL;
                 if ($_SESSION["errors"]) {
                     $this->redirect('/dashboard/candidature');
                 }
                 
                 $this->manager->store($user_id);
-                $this->redirect('/dashboard/'. $_POST["firstname"]);
+                $this->redirect('/dashboard/valide');
             }
 
             public function show($firstname)
@@ -86,6 +86,11 @@
             {
                 $candidate = $this->manager->all();
                 require VIEW.'archivedash.php';
+            }
+
+            public function showValid()
+            {
+                require VIEW.'valide.php';                
             }
 
 
