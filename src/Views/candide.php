@@ -59,7 +59,7 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                     </li>
                     <li class="mr-3 flex-1">
                         <a href="/admin/dashboard" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-                            <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
+                            <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
@@ -129,10 +129,20 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                             <span class="text-red-500"><?php echo isset($_SESSION["errors"]["link"]) ? $_SESSION["errors"]["link"] : "";?></span>
                             </div>
                         </div>
+<<<<<<< HEAD
                             
                           <div class="flex justify-end flex-wrap p-4">
                             
                             <div class="flex justify-end flex-wrap p-4">
+=======
+
+                            
+                          <div class="flex justify-end flex-wrap p-4">
+                            
+
+                            <div class="flex justify-end flex-wrap p-4">
+
+>>>>>>> 3741eec55900de3b3aa923e9d8d2b4ad0952e0aa
                             <div class="ml-5">
                                 <button type="submit" class="p-2 bg-blue-900 rounded hover:bg-gray-600 text-white">Valide ton formulaire</button>
                         </div>

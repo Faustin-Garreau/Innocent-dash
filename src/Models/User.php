@@ -19,12 +19,20 @@ class User {
     public function getId(){
         return $this->id;
     }
+        
+    public function setPseudo(){
+        }
 
-    public function setUsername($username){
+    public function getAdmin(){
+        return $this->admin;
+    }
+
+        public function setUsername($username){
             
-    }
+        }
 
-    public function setPassword(String $password){
+        public function setPassword(String $password){
 
-    }
+
+        }
     }

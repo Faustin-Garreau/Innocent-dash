@@ -40,10 +40,10 @@
                 if ($_SESSION["errors"]) {
                     $this->redirect('/homedash');
                 }
-                
                 $this->manager->store($user_id);
                 $this->redirect('/dashboard/valide');
-            }
+                }   
+                
 
             public function show($firstname)
             {
@@ -88,7 +88,7 @@
         public function homeDash() {
             require VIEW.'homedash.php';
         }
-        
+
             public function archive()
             {
                 $candidate = $this->manager->all();
@@ -100,3 +100,4 @@
                 require VIEW.'valide.php';
             }
         }
+
