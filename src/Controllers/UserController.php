@@ -46,8 +46,9 @@
 
                 if (!$user && empty($_SESSION['errors'])) {
                     $id = $this->manager->store();
-                    $_SESSION["user"] = ["pseudo" => $_POST['pseudo'], "id" => $id];
-                    $this->redirect('/dashboard/candidature');
+                    $user = $this->manager->findById($id);
+                    $_SESSION["user"] = $user;
+                    $this->redirect('/homedash');
                     
                 }
                 $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
@@ -73,10 +74,14 @@
                 if (!$user || ($user && !password_verify($_POST["password"], $user->getPassword()))) {
                     $_SESSION["errors"]["password"] = "Les identifiant ne sont pas bon";
                     $this->redirect('/login');
-                
                 }
-                $_SESSION["user"] = ["pseudo" => $user->getPseudo(), "id" => $user->getId()];
-                $this->redirect('/dashboard/candidature');
+                
+                
+                $_SESSION["user"] = $user;
+                if ($user->getAdmin()) {
+                    $this->redirect('/admin/dashboard');
+                }
+                $this->redirect('/homedash');
             }
 
             public function showRegister() {

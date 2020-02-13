@@ -1,16 +1,19 @@
 <?php
 namespace App\Controllers; 
-    use App\Models\AppManager;
+use App\Models\AppManager;
 
     class AdminController extends Controllers {
             private $manager;
             function __construct()
             {
+                if (!isset($_SESSION['user']) || !$_SESSION['user']->getAdmin()) {
+                    $this->redirect('/');
+                }
                 $this->manager = new AppManager(); 
                 parent::__construct();
             }
 
-            public function adminDashboard()
+                public function adminDashboard()
             {
                 $candidates = $this->manager->all();
                 require VIEW.'dashboard.php';

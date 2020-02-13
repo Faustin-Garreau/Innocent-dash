@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-class User {
+class Admin {
     private $admin;
     private $password;
     private $id;

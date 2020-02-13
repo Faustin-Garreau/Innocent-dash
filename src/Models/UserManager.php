@@ -29,4 +29,14 @@ class UserManager {
         $request->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\User');
         return $request->fetch();
     }
+
+    public function findById($id)
+    {
+        $request = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE id = :id');
+        $request->execute([
+            "id" => $id
+        ]);
+        $request->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\User');
+        return $request->fetch();
+    }
 }

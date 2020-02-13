@@ -2,6 +2,7 @@
     namespace App\Controllers; 
     use App\Models\AppManager;
     use App\Validator;
+    use App\UserController;
 
     class AppController extends Controllers {
             private $manager;
@@ -9,12 +10,6 @@
             {
                 $this->manager = new AppManager(); 
                 parent::__construct();
-            }
-        
-            public function index()
-            {
-                $candidate = $this->manager->all();
-                require VIEW.'dashboard.php';
             }
 
             public function create()
@@ -31,9 +26,20 @@
         
                 if ($this->validator->errors()) {
                     $_SESSION["errors"] = $this->validator->errors();
-                    $this->redirect('/dashboard/candidature');
+                    $this->redirect('/homedash');
                 }
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
+                $name = $this->manager->find($_POST["name"]);
+                $firstname = $this->manager->find($_POST["firstname"]);
+        
                 
+                isset($name) ? $_SESSION["errors"]["name"] == "Ce nom est déja utilisé" : NULL;
+                isset($firstname) ? $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé" : NULL;
+                if ($_SESSION["errors"]) {
+                    $this->redirect('/homedash');
+                }   
                 $this->manager->store($user_id);
                 $this->redirect('/dashboard/valide');
             }
@@ -42,11 +48,17 @@
             {
                 $candidature = $this->manager->find($firstname);
                 require VIEW.'show.php';
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
             }
         
             public function showProfil($user) {
                 $profil = $this->manager->find($user);
                 require VIEW.'profile.php';
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
             }
         
             public function profil($firstname) {
@@ -72,6 +84,13 @@
                 $this->redirect('/dashboard/'. $_POST["firstname"]);
             }
 
+
+        public function homeDash() {
+            require VIEW.'homedash.php';
+        }
+        
+        }
+
             public function archive()
             {
                 $candidate = $this->manager->all();
@@ -83,3 +102,4 @@
                 require VIEW.'valide.php';
             }
     }
+
