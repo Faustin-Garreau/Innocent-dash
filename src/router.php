@@ -63,5 +63,4 @@ class Router {
             $controllerApp->profil($matches[1]);
         }
     }
-
 }

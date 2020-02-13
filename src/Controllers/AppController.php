@@ -33,16 +33,6 @@
                     $_SESSION["errors"] = $this->validator->errors();
                     $this->redirect('/dashboard/candidature');
                 }
-        
-                $name = $this->manager->find($_POST["name"]);
-                $firstname = $this->manager->find($_POST["firstname"]);
-        
-                
-                empty($name) ? $_SESSION["errors"]["name"] = "Ce nom est déja utilisé" : NULL;
-                empty($firstname) ? $_SESSION["errors"]["firstname"] = "Ce prénom est déja utilisé" : NULL;
-                if ($_SESSION["errors"]) {
-                    $this->redirect('/dashboard/candidature');
-                }
                 
                 $this->manager->store($user_id);
                 $this->redirect('/dashboard/valide');
@@ -90,8 +80,6 @@
 
             public function showValid()
             {
-                require VIEW.'valide.php';                
+                require VIEW.'valide.php';
             }
-
-
-        }
+    }

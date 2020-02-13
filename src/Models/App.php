@@ -12,27 +12,22 @@ class App {
         public function getName(){
             return $this->name;
         }
-        public function getPassword(){
+        public function getFirstname(){
             return $this->firstname;
         }
-
         public function getLink(){
             return $this->link;
         }
-
         public function getId(){
             return $this->id;
         }
-        
         public function setName(){
-
+            
         }
-
         public function setFirstname(){
             
         }
-
         public function setLink(){
-
+                
         }
 }

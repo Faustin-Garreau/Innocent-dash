@@ -40,18 +40,23 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
             <div class="md:fixed">
             <div class="md:mt-12 md:w-48 md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                 <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
-                    <li class="mr-3 flex-1">
+                <li class="mr-3 flex-1">
                         <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-innocent-500">
+                            <i class="fas fa-envelope pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Home</span>
+                        </a>
+                    </li>
+                    <li class="mr-3 flex-1">
+                        <a href="/dashboard/candidature" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-innocent-500">
                             <i class="fas fa-envelope pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Faire sa candidature</span>
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                        <a href="/admin/dashboard" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                        <a href="/dashboard/admin/archive"" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-wallet pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Candidature archiver</span>
                         </a>
                     </li>
@@ -67,7 +72,7 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
         <!-- LES CANDIDATURE -->
         <div class="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
             <div class="bg-gray-800 p-2 shadow text-xl text-white">
-                <h3 class="font-bold pl-2">Pose ta candidaturre</h3>
+                <h3 class="font-bold pl-2">Pose ta candidature</h3>
             </div>
         <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
@@ -97,7 +102,6 @@ https://cdn.discordapp.com/attachments/633761902526201887/641680754828509204/rou
                         </div>
 </div> -->
                 <form action="/dashboard/candidature" method="post">
-                <?php var_dump($_SESSION);?>
                     <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
                         <div class="-mx-3 md:flex mb-6">
                             <div class="md:w-1/2 px-3 mb-6 md:mb-0">

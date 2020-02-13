@@ -36,8 +36,7 @@ class AppManager {
         $request->execute([
             "user_id" => $_SESSION["user"]["id"]
         ]);
-        $request->setFetchMode(\PDO::FETCH_CLASS,'App\Models\Todo');
+        $request->setFetchMode(\PDO::FETCH_CLASS,'App\Models\App');
         return $request->fetchAll();
     }
-
 }
