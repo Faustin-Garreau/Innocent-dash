@@ -9,7 +9,7 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"><!--Replace with your tailwind.css once created-->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
@@ -54,16 +54,12 @@
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a  href="/dashboard/candidature" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                         <a href="/dashboard/candidature" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-
                             <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Faire sa candidature</span>
                         </a>
                     </li>
+                    
                     <li class="mr-3 flex-1">
-
-                        <a href="/" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-
                         <a href="/admin/dashboard" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
                         </a>
@@ -74,8 +70,7 @@
                         </a>
                     </li>
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-
+                        <a href="" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-user pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Mon profile</span>
                         </a>
                     </li>
@@ -122,32 +117,13 @@
                         </div>
                         
                     </div> -->
-                    <div class="container mx-auto p-8">
-                        <div class="title text-center p-8 text-3xl md:text-5xl ">
-                            InnocentLife <br />
-                             </div>
-                        <div class="flex flex-row flex-wrap -mx-2">
-                          <div class="w-full md:w-1/2 h-64 md:h-auto mb-4 px-2">
-                            <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" href="#" title="Link" style="background-image: url(https://pbs.twimg.com/media/EGcmON1WkAAtvYK.jpg);">
-                             
-                            </a>
-                          </div>
-                          <div class="w-full md:w-1/2 mb-4 px-2">
-                            <div class="flex flex-col sm:flex-row md:flex-col -mx-2">
-                              <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 mb-4 sm:mb-0 md:mb-4 px-2">
-                                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" href="#" title="Link" style="background-image: url(https://image.noelshack.com/fichiers/2020/07/3/1581514951-capture-d-ecran-2020-02-12-a-14-41-25.png);">
-                                  
-                                </a>
-                              </div>
-                              <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 px-2">
-                                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover" href="#" title="Link" style="background-image: url(https://image.noelshack.com/fichiers/2020/07/3/1581514961-capture-d-ecran-2020-02-12-a-14-41-44.png);">
-                                
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                   
+
+
+      <h1 class="text-6xl  my-auto mx-auto  md:mx-48 ">
+        Formulaire <br />
+        <span class="text-teal-400">Envoyé tu peux aller passe ta douane !</span>
+      </h1>
                     <!--/Template Card-->
                 </div>
             </div>

@@ -39,10 +39,9 @@
                 isset($firstname) ? $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé" : NULL;
                 if ($_SESSION["errors"]) {
                     $this->redirect('/homedash');
-                }
-                
-                $this->manager->store();
-                $this->redirect('/dashboard/'. $_POST["firstname"]);
+                }   
+                $this->manager->store($user_id);
+                $this->redirect('/dashboard/valide');
             }
 
             public function show($firstname)
@@ -85,8 +84,22 @@
                 $this->redirect('/dashboard/'. $_POST["firstname"]);
             }
 
+
         public function homeDash() {
             require VIEW.'homedash.php';
         }
         
         }
+
+            public function archive()
+            {
+                $candidate = $this->manager->all();
+                require VIEW.'archivedash.php';
+            }
+
+            public function showValid()
+            {
+                require VIEW.'valide.php';
+            }
+    }
+

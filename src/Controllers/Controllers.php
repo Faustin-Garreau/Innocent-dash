@@ -14,5 +14,5 @@ Class Controllers {
     {
         header('Location:'.$url);
         exit();
-    }   
+    }
 }

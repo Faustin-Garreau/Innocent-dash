@@ -76,6 +76,8 @@
 			<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
 				<button class="text-3xl md:text-3xl pr-4 text-purple-800 bounce-top-icons"><a href="/login">Connexion</a></button>
 				<button class="text-3xl md:text-3xl text-purple-800 bounce-top-icons"><a href="/register">Inscription</a></button>
+				<button class="text-3xl md:text-3xl pr-4 text-purple-800 bounce-top-icons" href="/login">Connexion</button>
+				<button class="text-3xl md:text-3xl text-purple-800 bounce-top-icons" href="/register">Inscription</button>
 			</div>
 		</div>
 		
