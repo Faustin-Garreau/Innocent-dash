@@ -33,5 +33,4 @@ namespace App\Controllers;
                 $this->manager->delete($firstname);
                 $this->redirect('/dashboard');
             }
-
         }

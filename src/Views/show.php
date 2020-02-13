@@ -90,16 +90,17 @@
 
             <div class="flex flex-row flex-wrap flex-grow mt-2">
                 <!-- FOR EACH A METTRE ICI POUR REPETER LES BOX -->
-                <div class="w-full	md:w-full xl:w-full p-3">
+                <?php foreach($candidature as $app) { ?>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-3">
                     <!--Template Card-->
                     <div class="bg-white border-transparent rounded-lg shadow-lg">
                         <div class="bg-gray-400 border-b-2 border-gray-500 rounded-tl-lg rounded-tr-lg p-2">
-                            <h5 class="font-bold uppercase text-gray-600">Candidature: Titre</h5>
+                            <h5 class="font-bold uppercase text-gray-600">Candidature</h5>
                         </div>
                         <div class="p-5">
-                            <h1>Nom:</h1>
-                            <h1>Prenom:</h1>
-                            <h1>Liens Gdocs:</h1>
+                            <h1>Nom:<?php echo $app->getName();?></h1>
+                            <h1>Prenom:<?php echo $app->getFirstname();?></h1>
+                            <h1>LiensGdocs:<?php echo $app->getLink();?></h1>
                         </div>
                         <div class="flex justify-end flex-wrap p-4">
                             <div>
@@ -109,7 +110,7 @@
                         </div>
                             <div class="ml-5">
                             <a href="" class="p-2 bg-blue-900 rounded hover:bg-gray-600 text-white">
-                                <i class="fas text-gray-100 fa-trash"></i>
+                                <i class="fas text-gray-100 fa-eye"></i>
                             </a>
                         </div>
                         </div>
@@ -117,6 +118,7 @@
                     </div>
                     <!--/Template Card-->
                 </div>
+            <?php } ?>
             </div>
         </div>
     </div>
