@@ -33,19 +33,9 @@
                     $_SESSION["errors"] = $this->validator->errors();
                     $this->redirect('/dashboard/candidature');
                 }
-        
-                $name = $this->manager->find($_POST["name"]);
-                $firstname = $this->manager->find($_POST["firstname"]);
-        
                 
-                isset($name) ? $_SESSION["errors"]["name"] == "Ce nom est déja utilisé" : NULL;
-                isset($firstname) ? $_SESSION["errors"]["firstname"] == "Ce prénom est déja utilisé" : NULL;
-                if ($_SESSION["errors"]) {
-                    $this->redirect('/dashboard/candidature');
-                }
-                
-                $this->manager->store();
-                $this->redirect('/dashboard/'. $_POST["firstname"]);
+                $this->manager->store($user_id);
+                $this->redirect('/dashboard/valide');
             }
 
             public function show($firstname)
@@ -88,5 +78,8 @@
                 require VIEW.'archivedash.php';
             }
 
-
-        }
+            public function showValid()
+            {
+                require VIEW.'valide.php';
+            }
+    }

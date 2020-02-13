@@ -100,7 +100,6 @@
                             <h1>Nom:</h1>
                             <h1>Prenom:</h1>
                             <h1>Liens Gdocs:</h1>
-                            <h1>Activiter:</h1>
                         </div>
                         <div class="flex justify-end flex-wrap p-4">
                             <div>
