@@ -15,7 +15,7 @@ use App\Models\AppManager;
 
                 public function adminDashboard()
             {
-                $candidate = $this->manager->all();
+                $candidates = $this->manager->all();
                 require VIEW.'dashboard.php';
             }
 

@@ -44,6 +44,9 @@ class Router {
         else if ($this->url == '/dashboard/candidature' && $this->method == 'GET') {
             $controllerApp->create();
         }
+        else if ($this->url == '/dashboard/valide' && $this->method == 'GET') {
+            $controllerApp->showValid();
+        }
         else if ($this->url == '/dashboard/admin/archive' && $this->method == 'GET') {
         $controllerAdmin = new AdminController();
         $controllerAdmin->ArchiveApplication();
@@ -66,5 +69,4 @@ class Router {
             $controllerApp->profil($matches[1]);
         }
     }
-
 }

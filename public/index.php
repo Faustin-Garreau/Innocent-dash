@@ -1,6 +1,5 @@
 <?php
 require '../vendor/autoload.php';
-
 session_start();
 define('SRC',__DIR__.'/../src/');
 define('CONTROLLER',__DIR__.'/../src/Controllers/');

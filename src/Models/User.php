@@ -1,6 +1,8 @@
 <?php 
 
 namespace App\Models;
+
+
 class User {
     private $pseudo;
     private $password;
@@ -18,13 +20,11 @@ class User {
         return $this->id;
     }
 
-    public function getAdmin(){
-        return $this->admin;
+    public function setUsername($username){
+            
     }
-
-    public function setPseudo($pseudo){
-        }
 
     public function setPassword(String $password){
+
     }
-}
+    }
