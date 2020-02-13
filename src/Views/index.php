@@ -74,8 +74,8 @@
 			<h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Salut bienvenu sur le panel de innocentlife</h1>
 			<p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Ici tu peux te connecter et candidater pour rejoindre le serveur</p>
 			<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
-				<button class="text-3xl md:text-3xl pr-4 text-purple-800 bounce-top-icons" href="">Connexion</button>
-				<button class="text-3xl md:text-3xl text-purple-800 bounce-top-icons">Inscription</button>
+				<button class="text-3xl md:text-3xl pr-4 text-purple-800 bounce-top-icons"><a href="/login">Connexion</a></button>
+				<button class="text-3xl md:text-3xl text-purple-800 bounce-top-icons"><a href="/register">Inscription</a></button>
 			</div>
 		</div>
 		

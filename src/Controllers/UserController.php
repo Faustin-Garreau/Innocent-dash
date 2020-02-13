@@ -40,7 +40,8 @@
 
                 if (!$user && empty($_SESSION['errors'])) {
                     $id = $this->manager->store();
-                    $_SESSION["user"] = ["pseudo" => $_POST['pseudo'], "id" => $id];
+                    $user = $this->manager->findById($id);
+                    $_SESSION["user"] = $user;
                     $this->redirect('/homedash');
                     
                 }
@@ -68,11 +69,12 @@
                     $_SESSION["errors"]["password"] = "Les identifiant ne sont pas bon";
                     $this->redirect('/login');
                 }
+                
+                
+                $_SESSION["user"] = $user;
                 if ($user->getAdmin()) {
                     $this->redirect('/admin/dashboard');
                 }
-                
-                $_SESSION["user"] = ["pseudo" => $user->getPseudo(), "id" => $user->getId()];
                 $this->redirect('/homedash');
             }
 

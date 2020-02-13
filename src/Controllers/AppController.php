@@ -2,6 +2,7 @@
     namespace App\Controllers; 
     use App\Models\AppManager;
     use App\Validator;
+    use App\UserController;
 
     class AppController extends Controllers {
             private $manager;
@@ -27,7 +28,9 @@
                     $_SESSION["errors"] = $this->validator->errors();
                     $this->redirect('/homedash');
                 }
-        
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
                 $name = $this->manager->find($_POST["name"]);
                 $firstname = $this->manager->find($_POST["firstname"]);
         
@@ -46,11 +49,17 @@
             {
                 $candidature = $this->manager->find($firstname);
                 require VIEW.'show.php';
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
             }
         
             public function showProfil($user) {
                 $profil = $this->manager->find($user);
                 require VIEW.'profile.php';
+                if (!isset($_SESSION["user"])) {
+                    $this->redirect('/login');
+            }
             }
         
             public function profil($firstname) {
@@ -79,6 +88,5 @@
         public function homeDash() {
             require VIEW.'homedash.php';
         }
-
-
+        
         }

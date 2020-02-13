@@ -48,24 +48,18 @@
             <div class="md:fixed">
             <div class="md:mt-12 md:w-48 md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                 <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
+                <li class="mr-3 flex-1">
+                        <a href="/homedash" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                            <i class="fa fa-user pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Home</span>
+                        </a>
+                    </li>
                     <li class="mr-3 flex-1">
                         <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-innocent-500">
                             <i class="fas fa-envelope pr-0 md:pr-3 text-gray-500"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Faire sa candidature</span>
                         </a>
                     </li>
-                    
                     <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-                            <i class="fa fa-chart-area pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Liste des candidatures</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
-                            <i class="fa fa-wallet pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Candidature archiver</span>
-                        </a>
-                    </li>
-                    <li class="mr-3 flex-1">
-                        <a href="#" class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
+                        <a class="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-innocent-500">
                             <i class="fa fa-user pr-0 md:pr-3"></i><span class="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Mon profile</span>
                         </a>
                     </li>
@@ -137,53 +131,6 @@
                             
                           </div>
                         </div>
-                        <style> 
-                            .custom-label input:checked + svg {
-                                display: block !important;
-                            }
-                            </style>
-                            <label class="custom-label flex">
-                                  <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                    <input type="checkbox" class="hidden" checked>
-                                    <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                  </div>
-                                  <span class="select-none">Illegale</span>
-                            </label>
-                            <label class="custom-label flex">
-                                <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                  <input type="checkbox" class="hidden" checked>
-                                  <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                </div>
-                                <span class="select-none">Civile</span>
-                          </label>
-                            <label class="custom-label flex">
-                                <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                  <input type="checkbox" class="hidden" checked>
-                                  <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                </div>
-                                <span class="select-none">LSPD</span>
-                                <label class="custom-label flex">
-                                    <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                      <input type="checkbox" class="hidden" checked>
-                                      <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                    </div>
-                                    <span class="select-none">EMS</span>
-                                    <label class="custom-label flex">
-                                        <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                          <input type="checkbox" class="hidden" checked>
-                                          <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                        </div>
-                                        <span class="select-none">MECANO</span>
-                                  </label>
-                                  <label class="custom-label flex">
-                                    <div class="bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2">
-                                      <input type="checkbox" class="hidden" checked>
-                                      <svg class="hidden w-4 h-4 text-blue-600 pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
-                                    </div>
-                                    <span class="select-none">AUTRES</span>
-                              </label>
-                              </label>
-                          </label>
                             
                           <div class="flex justify-end flex-wrap p-4">
                             
